@@ -38,7 +38,7 @@ vim.keymap.set("i", "<C-:>", "<Plug>(copilot-previous)")
 vim.keymap.set("i", "<C-;>", "<Plug>(copilot-next)")
 
 -- enter delete mode with <C-d> while in insert mode
-vim.keymap.set("i", "<C-d>", "<Esc>di")
+vim.keymap.set("i", "<C-d>", "<C-o>d")
 
 -- enable save even when in insert mode using :w and return to insert mode
 vim.keymap.set("i", ":w<cr>", "<Esc>:w<cr>a")
@@ -52,3 +52,13 @@ vim.keymap.set("n", "<leader>gTb", ":Gitsigns toggle_current_line_blame<cr>", { 
 
 -- set foldmethod to syntax
 vim.opt.foldmethod = "syntax"
+
+vim.keymap.set("n", "<C-UP>", ":m-2<CR>", { desc = "Move line up" })
+vim.keymap.set("n", "<C-DOWN>", ":m+<CR>", { desc = "Move line down" })
+vim.keymap.set("v", "<C-UP>", ":m-2<CR><Esc>gv", { desc = "Move line up" })
+vim.keymap.set("v", "<C-DOWN>", ":m'>+1<CR><Esc>gv", { desc = "Move line down" })
+
+vim.keymap.set("n", "<C-A-UP>", ":t.<CR>", { desc = "Duplicate line " })
+vim.keymap.set("n", "<C-A-DOWN>", "yy:pu<CR>", { desc = "Duplicate line" })
+vim.keymap.set("v", "<C-A-UP>", ":t.<CR>", { desc = "Duplicate line" })
+vim.keymap.set("v", "<C-A-DOWN>", "y:pu<CR>", { desc = "Duplicate line" })

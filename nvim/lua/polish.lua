@@ -62,3 +62,5 @@ vim.keymap.set("n", "<C-A-UP>", ":t.<CR>", { desc = "Duplicate line " })
 vim.keymap.set("n", "<C-A-DOWN>", "yy:pu<CR>", { desc = "Duplicate line" })
 vim.keymap.set("v", "<C-A-UP>", ":t.<CR>", { desc = "Duplicate line" })
 vim.keymap.set("v", "<C-A-DOWN>", "y:pu<CR>", { desc = "Duplicate line" })
+
+vim.keymap.set("n", "<leader>fy", ":Telescope neoclip<cr>", { desc = "Open neoclip" })

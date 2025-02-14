@@ -64,3 +64,7 @@ vim.keymap.set("v", "<C-A-UP>", ":t.<CR>", { desc = "Duplicate line" })
 vim.keymap.set("v", "<C-A-DOWN>", "y:pu<CR>", { desc = "Duplicate line" })
 
 vim.keymap.set("n", "<leader>fy", ":Telescope neoclip<cr>", { desc = "Open neoclip" })
+
+vim.keymap.set({ "n", "x", "o" }, "s", "<Plug>(leap-forward)")
+vim.keymap.set({ "n", "x", "o" }, "S", "<Plug>(leap-backward)")
+vim.keymap.set({ "n", "x", "o" }, "gs", "<Plug>(leap-from-window)")
